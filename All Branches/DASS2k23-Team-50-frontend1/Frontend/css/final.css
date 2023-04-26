@@ -1,0 +1,103 @@
+.sidebar {
+  position: absolute;
+  top: 450px;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  display: block;
+  padding: 20px;
+  background-color: #f8f9fa;
+  transition: all 1s ease-in-out;
+}
+
+.product-list {
+  margin-left: 200px;
+  padding: 20px;
+}
+
+.filter-box {
+  margin-bottom: 20px;
+  overflow-y: auto;
+}
+
+.filter-box h4 {
+  margin-bottom: 10px;
+}
+
+.filter-box .form-check {
+  margin-bottom: 5px;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  z-index: 1;
+}
+
+.flipcard {
+  perspective: 1000px;
+}
+
+.flipcard:hover .card {
+  transform: rotateY(180deg);
+}
+
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: #fff;
+  border-radius: 0 20px 0 20px;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+  color: #000;
+  background: #fff;
+}
+
+.slider{
+  height: 10px;
+  position: relative;
+  background: #ddd;
+  border-radius: 5px;
+}
+.slider .progress{
+  height: 100%;
+  left: 25%;
+  right: 25%;
+  position: absolute;
+  border-radius: 5px;
+  background: #17A2B8;
+}
+
+.range-input{
+  margin-bottom: 20px;
+}
+
+.range-input input{
+  position: absolute;
+  width: 80%;
+  height: 5px;
+  top: 297px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: #17A2B8;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
